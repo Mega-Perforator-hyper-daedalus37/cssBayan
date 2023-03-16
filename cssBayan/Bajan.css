@@ -1,0 +1,135 @@
+h1 {
+    font-size: 2em;
+    margin: 0 0 0.2em 0;
+}
+
+body {
+    background: beige;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.bayan {
+    margin: 0.5em auto;
+    width: 25em;
+    cursor: pointer;
+}
+
+.bayan-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.bayan-list:hover .one-bayan .bayan-title {
+    color: black;
+}
+.bayan-list:hover .one-bayan .bayan-title .bayan-title-icon{
+    transform: rotate(0deg) scale(1);
+}
+
+.one-bayan {
+    border-top: .05em solid gainsboro;
+}
+
+.one-bayan:active {
+    background-color: aliceblue;
+}
+
+.bayan-touch {
+    appearance: none;
+    position: absolute;
+}
+
+.bayan-title {
+    cursor: pointer;
+    display: block;
+    margin: .5em 0;
+    transition: .2s ease-out;
+    position: relative;
+    color: blue;
+}
+
+.bayan-title-icon {
+    transform: rotate(0deg) scale(0);
+    position: absolute;
+    right: 0em;
+    transition: 0.5s ease-in-out;
+}
+
+.one-bayan:hover > .bayan-image-outer {
+    transform: scale(1);
+    opacity: 1;
+    max-height: 15em;
+}
+
+.one-bayan:hover > .bayan-title .bayan-title-icon {
+    transform: rotate(90deg) scale(1) !important;
+}
+#item-4:checked ~ .bayan-title {
+    color: black;
+}
+
+#item-4:checked ~ .bayan-image-outer {
+    transform: scale(1);
+    opacity: 1;
+    max-height: 15em;
+}
+
+#item-3:checked ~ .bayan-title {
+    color: black;
+}
+
+#item-3:checked ~ .bayan-image-outer {
+    transform: scale(1);
+    opacity: 1;
+    max-height: 15em;
+}
+
+#item-2:checked ~ .bayan-title {
+    color: black;
+}
+
+#item-2:checked ~ .bayan-image-outer {
+    transform: scale(1);
+    opacity: 1;
+    max-height: 15em;
+}
+
+#item-1:checked ~ .bayan-title {
+    color: black;
+}
+
+#item-1:checked ~ .bayan-image-outer {
+    transform: scale(1);
+    opacity: 1;
+    max-height: 15em;
+}
+
+.bayan-touch:checked ~ .bayan-title::after {
+    transform: rotate(45deg);
+}
+
+.bayan-image-outer {
+    opacity: 0;
+    transform: scale(0);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    max-height: 0;
+}
+
+.one-bayan-image {
+    object-fit: cover;
+    display: block;
+    background: white;
+    overflow: hidden;
+    max-width: 15em;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
